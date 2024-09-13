@@ -1,0 +1,1122 @@
+﻿
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+
+
+
+
+    <meta name="viewport" content="width=device-width" charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="description" content="Portfolio management by Deloitte Thailand.">
+    <meta name="author" content="htmlcoder.me">
+
+    <title>KPIs Dashboard - DSMM FY25</title>
+    <!-- Mobile Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="~/Content/MainContent/images/favicon_Deloitte.ico">
+
+    <!-- Web Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:700,400,300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=PT+Serif' rel='stylesheet' type='text/css'>
+    @*<script src='https://cdn.polyfill.io/v2/polyfill.min.js'></script>*@
+    <!-- Bootstrap core CSS -->
+    <script type="text/javascript" src="~/Content/MainContent/plugins/jquery.min.js"></script>
+    <link href="~/Content/MainContent/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Font Awesome CSS -->
+    <link href="~/Content/MainContent/fonts/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    @*<link href="~/Scripts/plugin/ui/jquery-ui.min.css" rel="stylesheet" />*@
+
+    <link href="~/Scripts/plugin/ui/css/custom-theme/jquery-ui-1.10.0.custom.css" rel="stylesheet" />
+    <!-- Fontello CSS -->
+    <link href="~/Content/MainContent/fonts/fontello/css/fontello.css" rel="stylesheet">
+
+    <!-- Plugins -->
+    <link href="~/Content/MainContent/plugins/magnific-popup/magnific-popup.css" rel="stylesheet">
+    <link href="~/Content/MainContent/plugins/rs-plugin-5/css/settings.css" rel="stylesheet">
+    <link href="~/Content/MainContent/plugins/rs-plugin-5/css/layers.css" rel="stylesheet">
+    <link href="~/Content/MainContent/plugins/rs-plugin-5/css/navigation.css" rel="stylesheet">
+    <link href="~/Content/MainContent/css/animations.css" rel="stylesheet">
+    <link href="~/Content/MainContent/plugins/owlcarousel2/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="~/Content/MainContent/plugins/owlcarousel2/assets/owl.theme.default.min.css" rel="stylesheet">
+    <link href="~/Content/MainContent/plugins/hover/hover-min.css" rel="stylesheet">
+    <link href="~/Content/MainContent/plugins/morphext/morphext.css" rel="stylesheet">
+    @*<link href="~/Scripts/plugin/datepicker/css/bootstrap-datepicker3.css" rel="stylesheet" />*@
+    <!-- The Project's core CSS file -->
+    <!-- Use css/rtl_style.css for RTL version -->
+    <link href="~/Content/MainContent/css/style.css" rel="stylesheet">
+    <!-- The Project's Typography CSS file, includes used fonts -->
+    <!-- Used font for body: Roboto -->
+    <!-- Used font for headings: Raleway -->
+    <!-- Use css/rtl_typography-default.css for RTL version -->
+    <link href="~/Content/MainContent/css/typography-default.css" rel="stylesheet">
+    <!-- Color Scheme (In order to change the color scheme, replace the blue.css with the color scheme that you prefer)-->
+    <link href="~/Content/MainContent/css/skins/green.css" rel="stylesheet">
+
+    <link href="~/Content/cssload-triangle.css" rel="stylesheet" />
+    @*<link href="~/Scripts/plugin/bootstrap3-dialog-master/css/bootstrap-dialog.css" rel="stylesheet" />*@
+    <link href="~/Scripts/plugin/bootstrap3-dialog-master/css/bootstrap-dialogV4.css" rel="stylesheet" />
+    <!-- Custom css -->
+    <link href="~/Content/MainContent/css/custom.css" rel="stylesheet">
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <style>
+        .medium_white {
+            font-size: 18px;
+        }
+
+        header.header .btn {
+            color: #ffffff;
+        }
+
+        .fixed-header-on header.header .btn {
+            margin-top: 5px !important;
+        }
+
+        .list-style-icons .nav-item {
+            font-size: 16px;
+            padding: 1px 0;
+            font-weight: 300;
+        }
+
+        .footer .list-style-icons .nav-item {
+            color: #dddddd;
+        }
+
+        .header-dropdown-buttons .btn-group > .btn,
+        .colored .header-dropdown-buttons .btn-group > .btn {
+            background-color: rgb(36, 168, 40) !important;
+            border: 1px solid rgba(61, 213, 32, 0.15) !important;
+            text-shadow: 1px 1px rgba(0, 0, 0, 0.7) !important;
+            color: #cdcdcd !important;
+        }
+
+        .modal-footer {
+            height: 50px;
+        }
+
+        .bootstrap-dialog-header {
+            width: 100%;
+        }
+
+        .bootstrap-dialog-footer-buttons .btn {
+            margin-right: 5px !important;
+        }
+
+        .pointer {
+            cursor: pointer;
+        }
+
+        @@media (min-width: 1200px) {
+            .container {
+                max-width: 1540px !important;
+            }
+        }
+
+        .table-b-table-default {
+            background-color: #86BC25 !important;
+        }
+
+        .p-10 {
+            padding: 10px;
+        }
+    </style>
+
+
+
+    <style>
+
+
+            .dirty {
+                border-color: #5A5;
+                background: #EFE;
+            }
+
+                .dirty:focus {
+                    outline-color: #8E8;
+                }
+
+            .error {
+                border-color: red;
+                background: #FDD;
+            }
+
+                .error:focus {
+                    outline-color: #F99;
+                }
+
+
+            .item {
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+
+            .item-card {
+                transition: 0.5s;
+                cursor: pointer;
+            }
+
+            .item-card-title {
+                font-size: 15px;
+                transition: 1s;
+                cursor: pointer;
+            }
+
+                .item-card-title i {
+                    font-size: 15px;
+                    transition: 1s;
+                    cursor: pointer;
+                    color: #ffa710
+                }
+
+            /*      .card-title i:hover {
+                    transform: scale(1.25) rotate(100deg);
+                    color: #18d4ca;
+                }
+
+                .card:hover {
+                    transform: scale(1.05);
+                    box-shadow: 10px 10px 15px rgba(0,0,0,0.3);
+                }*/
+
+            .card-text {
+                height: 80px;
+            }
+
+            .card::before, .card::after {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                transform: scale3d(0, 0, 1);
+                transition: transform .3s ease-out 0s;
+                background: rgba(255, 255, 255, 0.1);
+                content: '';
+                pointer-events: none;
+            }
+
+            .card::before {
+                transform-origin: left top;
+            }
+
+            .card::after {
+                transform-origin: right bottom;
+            }
+
+            /*.card:hover::before, .card:hover::after, .card:focus::before, .card:focus::after {
+                    transform: scale3d(1, 1, 1);
+                }
+        */
+            .bottom-align-text {
+                position: absolute;
+                bottom: 0;
+            }
+
+            .disInfomation[disabled] {
+                color: #000000 !important;
+                opacity: 1 !important;
+            }
+    </style>
+</head>
+<body class=" ">
+
+    <!-- scrollToTop -->
+    <!-- ================ -->
+    <div class="scrollToTop circle"><i class="icon-up-open-big"></i></div>
+
+    <!-- page wrapper start -->
+    <!-- ================ -->
+    <div class="page-wrapper">
+        <!-- header-container start -->
+        <div class="header-container ">
+            <!-- header-top start -->
+            <!-- classes:  -->
+            <!-- "dark": dark version of header top e.g. class="header-top dark" -->
+            <!-- "colored": colored version of header top e.g. class="header-top colored" -->
+            <!-- ================ -->
+            <div class="header-top dark">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-4 col-sm-4 col-lg-4 text-left">
+                            <!-- header-top-first start -->
+                            <!-- ================ -->
+                            <div class="header-top-first clearfix">
+                                <ul class="list-inline hidden-md-down">
+                                    <li class="list-inline-item">Portfolio management System</li>
+                                </ul>
+                            </div>
+                            <!-- header-top-first end -->
+                        </div>
+                        <div class="col-8 col-sm-8 col-lg-8 text-right">
+                            <!-- header-top-first start -->
+                            <!-- ================ -->
+                            <div class="header-top-first clearfix">
+                                <ul class="list-inline hidden-md-down">
+                                    <li class="list-inline-item"><i class="fa  fa-id-card-o pr-1 pl-2"></i>Teeraphon Konkaew</li>
+                                    <li class="list-inline-item"><i class="fa fa-group pr-1 pl-2"></i>Manager</li>
+                                    @*<li class="list-inline-item">
+                                        <a href="@Url.Action("ChangeRoles", "Home", null)" class="btn btn-success btn-sm">Change Role</a>
+                                    </li>*@
+                                </ul>
+                                @*@Html.ActionLink("Sign out", "SignOut", "Home")*@
+                                @*@Html.ActionLink("Change User", "ChangeRole", "Home")*@
+                            </div>
+
+                            <!-- header-top-first end -->
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- header-top end -->
+            <!-- header start -->
+            <!-- classes:  -->
+            <!-- "fixed": enables fixed navigation mode (sticky menu) e.g. class="header fixed clearfix" -->
+            <!-- "fixed-desktop": enables fixed navigation only for desktop devices e.g. class="header fixed fixed-desktop clearfix" -->
+            <!-- "fixed-all": enables fixed navigation only for all devices desktop and mobile e.g. class="header fixed fixed-desktop clearfix" -->
+            <!-- "dark": dark version of header e.g. class="header dark clearfix" -->
+            <!-- "centered": mandatory class for the centered logo layout -->
+            <!-- ================ -->
+            <header class="header dark fixed fixed-desktop clearfix">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-auto hidden-md-down">
+                            <!-- header-first start -->
+                            <!-- ================ -->
+                            <div class="header-first clearfix">
+
+                                <!-- logo -->
+                                <div id="logo" class="logo">
+                                    <a href="@Url.Action("Index", "Home", null)"><img id="logo_img" src="~/intro-images/siteIcon_Deloitte.png" alt="Deloitte"></a>
+                                </div>
+
+                                <!-- name-and-slogan -->
+                                <div class="site-slogan">
+                                    Deloitte Thailand Intranet
+                                </div>
+
+                            </div>
+                            <!-- header-first end -->
+
+                        </div>
+                        <div class="col-lg-8 ml-auto">
+
+                            <!-- header-second start -->
+                            <!-- ================ -->
+                            <div class="header-second clearfix">
+
+                                <!-- main-navigation start -->
+                                <!-- classes: -->
+                                <!-- "onclick": Makes the dropdowns open on click, this the default bootstrap behavior e.g. class="main-navigation onclick" -->
+                                <!-- "animated": Enables animations on dropdowns opening e.g. class="main-navigation animated" -->
+                                <!-- ================ -->
+                                <div class="main-navigation main-navigation--mega-menu  animated">
+                                    <nav class="navbar navbar-expand-lg navbar-light p-0">
+                                        <div class="navbar-brand clearfix hidden-lg-up">
+
+                                            <!-- logo -->
+                                            <div id="logo-mobile" class="logo">
+                                                <a href="@Url.Action("Index", "Home", null)"><img id="logo-img-mobile" src="~/intro-images/siteIcon_Deloitte.png" alt="The Project"></a>
+                                            </div>
+
+                                            <!-- name-and-slogan -->
+                                            <div class="site-slogan">
+                                                Deloitte Thailand Intranet
+                                            </div>
+
+                                        </div>
+
+                                        <!-- header dropdown buttons -->
+                                        <!-- header dropdown buttons end-->
+
+                                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse-1" aria-controls="navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
+                                            <span class="navbar-toggler-icon"></span>
+                                        </button>
+
+                                        <div class="collapse navbar-collapse" id="navbar-collapse-1">
+                                            <!-- main-menu -->
+                                            <!-- sidebar menu: : style can be found in sidebar.less -->
+                                            <ul class="navbar-nav ml-xl-auto">
+
+
+                                                <li class="nav-item dropdown  mega-menu mega-menu--wide">
+                                                    <a id="1"
+                                                       href="/"
+                                                       class="nav-link " onClick="BlockUIMenu()" aria-haspopup="true" aria-expanded="false">Home</a>
+                                                </li>
+                                                <li class="nav-item dropdown ">
+
+                                                    <a href="#" id="2" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">KPI Dashboard</a>
+                                                    <ul class="dropdown-menu" aria-labelledby="2">
+                                                        <li class="">
+                                                            <a id="3" href="/KPIsDashboard/MyKPIFY25" onClick="BlockUIMenu()"
+                                                               ="FY25 My KPI(DSMM Only)" flow="right">
+                                                                FY25 My KPI(DSMM Only)
+                                                            </a>
+                                                        </li>
+
+                                                    </ul>
+                                                </li>
+
+                                            </ul>
+                                            <!-- main-menu end -->
+                                        </div>
+                                    </nav>
+                                </div>
+                                <!-- main-navigation end -->
+                            </div>
+                            <!-- header-second end -->
+
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- header end -->
+        </div>
+        <!-- header-container end -->
+        <!-- main-container start -->
+        <!-- ================ -->
+        <!-- main-container end -->
+        <!-- section end -->
+        <div class="breadcrumb-container">
+            <div class="container">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><i class="fa fa-home pr-2"></i><a href="/">Home</a></li>
+                    <li class="breadcrumb-item active">DSMM KPIs Dashboard Page</li>
+                </ol>
+            </div>
+        </div>
+        <section id="vue_drms">
+            <div class="section pv-40 parallax light-translucent-bg background-img-6" style="background-position: 50% 32px;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <p class="bg-success text-white text-center p-20">
+                                <strong>
+                                    KPI Dashboard FY25<br>
+                                </strong>
+                            </p>
+                        </div>
+                    </div> <div class="row">
+                        <div class="main col-lg-12">
+                            <ul role="tablist" class="nav nav-tabs style-3"><li class="nav-item"><a href="#h3tab1" role="tab" data-toggle="tab" class="nav-link active"><i class="fa fa-home pr-2"></i>Overview - KPI</a></li> <li class="nav-item"><a href="#h3tab2" role="tab" data-toggle="tab" class="nav-link"><i class="fa fa-line-chart pr-2"></i>DSMM’s 180 Feedback Report </a></li></ul> <div class="tab-content">
+                                <div role="tabpanel" id="h3tab1" class="tab-pane show active">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="call-to-action light-gray-bg p-10 shadow bordered">
+                                                <div class="row">
+                                                    <div class="col-lg-12">
+                                                        <p class="bg-success text-white text-center p-10">
+                                                            <strong>
+                                                                DSMM Information
+                                                            </strong>
+                                                        </p>
+                                                    </div>
+                                                </div> <div class="row">
+                                                    <div class="col-lg-6"><div class="row"><div class="col-md-12"><div class="form-group"><label for="txfacilitator_name">Name</label> <select id="ddlPartner" name="ddlPartner" class="form-control form-control-sm "><option value="00103334">103334 : Akaradech Supapithayatorn (Resigned)</option> <option value="00104289">104289 : Anan Orikasa</option> <option value="00103683">103683 : Anchisa Foosrinual (Resigned)</option> <option value="00103346">103346 : Apichaya Saengpikul (Resigned)</option> <option value="00103348">103348 : Apinya Apimonsiri (Resigned)</option> <option value="00103555">103555 : Areeya Doddaecha (Resigned)</option> <option value="00103936">103936 : Arissara Sukapanon</option> <option value="00103349">103349 : Arpaporn Jariyarux (Resigned)</option> <option value="00107794">107794 : Arunee Tan</option> <option value="00103728">103728 : Attaphol Pakdeebanchasak</option> <option value="00102935">102935 : Attapon Lakkanapornlak</option> <option value="00103061">103061 : Auttacha Measincee</option> <option value="00104029">104029 : Budsarin Lupmongkolchai (Resigned)</option> <option value="00104271">104271 : Bussakorn Noppasittisuppapong</option> <option value="00103479">103479 : Chalalai Suriyapas (Resigned)</option> <option value="00103959">103959 : Chalermkwan Saiyaitong (Resigned)</option> <option value="00103584">103584 : Chalita Pruksaarruk (Resigned)</option> <option value="00103744">103744 : Chanakan Wongwichai</option> <option value="00103008">103008 : Chanakarn Sirisukhipradit</option> <option value="00720070">720070 : Chanakarn Sirisukhipradit (Resigned)</option> <option value="00104057">104057 : Chanakarn Tatchanachai</option> <option value="00100894">100894 : Chareeporn Usachokcharoen</option> <option value="00103175">103175 : Chayanit Watanarat (Resigned)</option> <option value="00101725">101725 : Chitpol Putireaponk</option> <option value="00104683">104683 : Chitrawadee Masertsri (Resigned)</option> <option value="00103797">103797 : Chompunuch Utis</option> <option value="00104338">104338 : Chompunut Aiemsamran</option> <option value="00103380">103380 : Chonnipha Varaphorn</option> <option value="00103815">103815 : Chotima Sornchuay (Resigned)</option> <option value="00104183">104183 : Chotnarin Sukjam</option> <option value="00103338">103338 : Chudaporn Pitukhoontrakool (Resigned)</option> <option value="00105544">105544 : Hisayoshi Fujita (Resigned)</option> <option value="00104575">104575 : Jakkrapob Choojan (Resigned)</option> <option value="00103237">103237 : Jenjira Tangputtaruk</option> <option value="00104418">104418 : Jipassorn Boonrod</option> <option value="00104013">104013 : Jiraporn Khammai</option> <option value="00103624">103624 : Jiraporn Wijidsarn</option> <option value="00104255">104255 : Jiratchaya Nuanla-ong</option> <option value="00103085">103085 : Jitladda Suriyachaiyakorn (Resigned)</option> <option value="00103964">103964 : Jitrada Ponsai</option> <option value="00104943">104943 : Joeyvoen Yi Fern Teo</option> <option value="00103004">103004 : Jutarut Kunvuttinun (Resigned)</option> <option value="00103392">103392 : Kanatip Laoratdecha</option> <option value="00104403">104403 : Kanin Yongrattanakit</option> <option value="00105567">105567 : Kanjanaporn Prathanporntip</option> <option value="00103406">103406 : Kankamol Phromhan (Resigned)</option> <option value="00103128">103128 : Kannika Jampachaisri (Resigned)</option> <option value="00104411">104411 : Kanokpich Rakkiatngam</option> <option value="00103707">103707 : Kanthika Soporn</option> <option value="00103606">103606 : Kanyarat Boonprasert</option> <option value="00102824">102824 : Kanyarat Vorakijroongroj</option> <option value="00106997">106997 : Kanyaratt Waiyaput (Resigned)</option> <option value="00102447">102447 : Kawin Namchaidee (Resigned)</option> <option value="00104577">104577 : Kawita Trongpanich</option> <option value="00103083">103083 : Keeratikan Borkird (Resigned)</option> <option value="00103235">103235 : Kewalee Sanitchai</option> <option value="00107230">107230 : Kittiya Iamtassana</option> <option value="00103088">103088 : Kornchawan Saneeboot (Resigned)</option> <option value="00102501">102501 : Korranopp Luengamponsak</option> <option value="00103005">103005 : Kriangkrai Jiansirisomboon</option> <option value="00103718">103718 : Kuljira Subnana</option> <option value="00103092">103092 : Kullapat Dullayamethee</option> <option value="00103493">103493 : Kunnatee Harnchoowong</option> <option value="00103727">103727 : Maethasith Joyjumroon</option> <option value="00103094">103094 : Maiprae Bunyapraphatsara</option> <option value="00104068">104068 : Manachai Seemakhajorn</option> <option value="00103941">103941 : Manita Pakakarasakul</option> <option value="00103943">103943 : Mantana Uraisakul</option> <option value="00103946">103946 : Maydhinee Anansawadkul (Resigned)</option> <option value="00107491">107491 : Moh Moh Theint (Resigned)</option> <option value="00730043">730043 : Moh Moh Theint (Resigned)</option> <option value="00102236">102236 : Mongkon Sujaritchon</option> <option value="00103096">103096 : Morakod Jiramatetrai (Resigned)</option> <option value="00103449">103449 : Naichanok Pitaksin (Resigned)</option> <option value="00100458">100458 : Nantharat Thanyasiri</option> <option value="00103099">103099 : Napat Tachatavon</option> <option value="00102455">102455 : Napat Tangchitvittaya</option> <option value="00103103">103103 : Narunporn Chitwiriyanont (Resigned)</option> <option value="00103343">103343 : Natanan Watwanitchakorn (Resigned)</option> <option value="00104176">104176 : Natcha Rattanasawatehirun</option> <option value="00104578">104578 : Natchuda Chimchome</option> <option value="00104374">104374 : Nathida Tharanont</option> <option value="00103184">103184 : Nattakarn Sriin (Resigned)</option> <option value="00103185">103185 : Nattaya Wongsaipanya (Resigned)</option> <option value="00103864">103864 : Nichkamol Panekwong (Resigned)</option> <option value="00103621">103621 : Niratcha Sunthornsak (Resigned)</option> <option value="00103385">103385 : Nithat Sae-Ngow (Resigned)</option> <option value="00103064">103064 : Nutchuda Chaiwattanapipat</option> <option value="00102554">102554 : Nuttawadee Chottikanmongkon (Resigned)</option> <option value="00101066">101066 : Nuttha Thanasomboon</option> <option value="00102725">102725 : Nuttida Jitwattanasuk (Resigned)</option> <option value="00103871">103871 : Ornicha Buathong (Resigned)</option> <option value="00103066">103066 : Pailin Archarpat</option> <option value="00103067">103067 : Pakhaporn Khampanich (Resigned)</option> <option value="00103373">103373 : Pakorn Thitikunakorn</option> <option value="00103550">103550 : Panatda Nakruangsri (Resigned)</option> <option value="00103007">103007 : Panicha Chotthananan (Resigned)</option> <option value="00103375">103375 : Panjaree Siriphol (Resigned)</option> <option value="00103186">103186 : Panwasa Premchit (Resigned)</option> <option value="00102907">102907 : Paphatsara Parakmasit (Resigned)</option> <option value="00102627">102627 : Papichaya Lertsirikorn</option> <option value="00104015">104015 : Parichat Sangkaew (Resigned)</option> <option value="00103376">103376 : Parinee Sourkaew</option> <option value="00103931">103931 : Pathareeya Tanghor</option> <option value="00102709">102709 : Patra Ngernsuthivorakul</option> <option value="00105224">105224 : Patsakorn Wutiampon (Resigned)</option> <option value="00103679">103679 : Patsamon Eourarekullart</option> <option value="00102071">102071 : Patsuntorn Chinpuvadol</option> <option value="00103564">103564 : Pattamaporn Kwanphueg (Resigned)</option> <option value="00103694">103694 : Phakkamon Akkarawannaphat</option> <option value="00101459">101459 : Phanvadee Wongwungjun</option> <option value="00104007">104007 : Phasiri Sae-toh</option> <option value="00104305">104305 : Phatara Chuphuttapong</option> <option value="00102631">102631 : Phiraya Chanpatya (Resigned)</option> <option value="00104328">104328 : Phongphorn Kwangmak</option> <option value="00102987">102987 : Phongpitsanu Suprachodchanon (Resigned)</option> <option value="00103395">103395 : Pimjai Sukjaroenchaikul (Resigned)</option> <option value="00102147">102147 : Pimolwan Chayapornkul</option> <option value="00104306">104306 : Pipat Ekwattanakij</option> <option value="00102866">102866 : Piriya Veeramanomai (Resigned)</option> <option value="00103197">103197 : Piskamon Limsuntorn (Resigned)</option> <option value="00103397">103397 : Pittsinee Chutchurdchaikun (Resigned)</option> <option value="00103022">103022 : Piyanan Jaichuen (Resigned)</option> <option value="00103761">103761 : Piyapat Preechalai</option> <option value="00105127">105127 : Ple Chantharakasemchai (Resigned)</option> <option value="00105128">105128 : Poomphat Kulvanichaporn</option> <option value="00106851">106851 : Poothanet Poochalermtrakoon (Resigned)</option> <option value="00100109">100109 : Pornprapa Saktavornlert</option> <option value="00102831">102831 : Pornson Chinchotangkul (Resigned)</option> <option value="00103588">103588 : Pranchali Suksataworapan</option> <option value="00102674">102674 : Prangthip Satitsathien (Resigned)</option> <option value="00103139">103139 : Praopicha Julothai (Resigned)</option> <option value="00103977">103977 : Prompat Sriterdtham (Resigned)</option> <option value="00103432">103432 : Punyisa Srithongtae (Resigned)</option> <option value="00104355">104355 : Purim Winchuan</option> <option value="00104107">104107 : Ratikon Hunmeethong</option> <option value="00102996">102996 : Ratima Kittiudomdach</option> <option value="00102192">102192 : Raveewan Choosupanasorn (Resigned)</option> <option value="00103411">103411 : Ronnakit Imsup (Resigned)</option> <option value="00103195">103195 : Rudee Tarudeeyataworn (Resigned)</option> <option value="00103439">103439 : Rungnapa Chatchumni (Resigned)</option> <option value="00104449">104449 : Rungnapha Rittisan (Resigned)</option> <option value="00103120">103120 : Sakda Nokbanjong</option> <option value="00102839">102839 : Sakonrat Supsoonturn</option> <option value="00103484">103484 : Saruda Buarod (Resigned)</option> <option value="00103415">103415 : Sarun Wattanasupinyo (Resigned)</option> <option value="00103243">103243 : Sarut Konglapamnuay</option> <option value="00104069">104069 : Sataporn Pangnakorn (Resigned)</option> <option value="00101174">101174 : Sathorn Saiklomklieo</option> <option value="00106405">106405 : Seiya Kitajima (Resigned)</option> <option value="00103573">103573 : Sek Lertsrisunthad (Resigned)</option> <option value="00103485">103485 : Singhanat Tangtakulpanich (Resigned)</option> <option value="00103984">103984 : Sirapop Sungkaew</option> <option value="00103364">103364 : Sireekran Amnueypol (Resigned)</option> <option value="00104028">104028 : Sirikamol Ungsitthipoonporn</option> <option value="00104260">104260 : Sirithorn Uthayaratana</option> <option value="00106657">106657 : Siriwan Limsakul</option> <option value="00104376">104376 : Sitthiphong Charoenkhunawuth</option> <option value="00103717">103717 : Sittipong Khorsantiwichai</option> <option value="00103196">103196 : Sivaphol Thanawattananon (Resigned)</option> <option value="00103489">103489 : Sontaya Gannakham (Resigned)</option> <option value="00102767">102767 : Sorasit Pitarangsi</option> <option value="00103129">103129 : Suchanat Niannatsakul (Resigned)</option> <option value="00104379">104379 : Sudarat Udomrattanasiri</option> <option value="00102250">102250 : Sudsawat Ritwara</option> <option value="00104167">104167 : Supang Dalad</option> <option value="00103249">103249 : Suphachai Jaihan (Resigned)</option> <option value="00103987">103987 : Suppitchaya Pornpanomvest (Resigned)</option> <option value="00103611">103611 : Suteemon Suwachad</option> <option value="00105533">105533 : Takenori Seki (Resigned)</option> <option value="00103417">103417 : Tanakorn Thamcharoenkij (Resigned)</option> <option value="00102646">102646 : Tanyaporn Sinvisoot</option> <option value="00103618">103618 : Tanyares Makaew</option> <option value="00103168">103168 : Thanabodee Nanthanavarangkool (Resigned)</option> <option value="00102488">102488 : Thanachoke Thanyasait</option> <option value="00104546">104546 : Thanamawit Hanrattanachaikul</option> <option value="00104339">104339 : Thananan Wechwannakijkul</option> <option value="00104103">104103 : Thanapat Ninla-o</option> <option value="00103660">103660 : Thanarit Nampachoke (Resigned)</option> <option value="00103768">103768 : Thanarut Sritangsirikul (Resigned)</option> <option value="00104465">104465 : Thanyapa Manoiy</option> <option value="00104175">104175 : Tharitima Saelee</option> <option value="00102491">102491 : Theeraphat Phisutsinthop (Resigned)</option> <option value="00103383">103383 : Thidarat Sermpanich (Resigned)</option> <option value="00103459">103459 : Thippisut Norasingthada (Resigned)</option> <option value="00103142">103142 : Thitima Leelawattanapanit (Resigned)</option> <option value="00103939">103939 : Thitinun Chuenthawat (Resigned)</option> <option value="00104986">104986 : Tippawan Lheansuwan</option> <option value="00103598">103598 : Tiwaporn Pornkangwansirithorn</option> <option value="00103798">103798 : Torpor Duriyapraneet</option> <option value="00104017">104017 : Tragan Thanyawinichkul (Resigned)</option> <option value="00103800">103800 : Treenuch Panthuvichien</option> <option value="00103391">103391 : Ubonwan Saeheng (Resigned)</option> <option value="00102054">102054 : Vorapat Pituckkitkarn (Resigned)</option> <option value="00102056">102056 : Waleerat Jirapakdeepan</option> <option value="00104571">104571 : Wanida Weerasatawanee</option> <option value="00100666">100666 : Warawan Tajan</option> <option value="00103260">103260 : Wasin Leanghirun (Resigned)</option> <option value="00102175">102175 : Wipada Monkongthum (Resigned)</option> <option value="00103151">103151 : Wirangrong Krobsanit (Resigned)</option> <option value="00104177">104177 : Woranittha Kittipoomwong (Resigned)</option> <option value="00102361">102361 : Worawan Tangjaroenjing (Resigned)</option> <option value="00103463">103463 : Yanisa Pornpanomvest</option> <option value="00103283">103283 : Yutthapong Wichitpanyarak (Resigned)</option></select></div></div></div> <div class="row"><div class="col-md-12"><div class="form-group"><label for="txtemp_level">Employee Level</label> <input type="text" id="txtemp_level" disabled="disabled" class="form-control form-control-sm disInfomation"></div></div></div> <div class="row"><div class="col-md-12"><div class="form-group"><label for="txtemp_unitgroup">Unit Name</label> <input type="text" id="txtemp_unitgroup" disabled="disabled" class="form-control form-control-sm disInfomation"></div></div></div></div> <div class="col-lg-6">
+                                                        <div class="row">
+                                                            <div class="col-lg-12"></div> <p>
+                                                                In case of any inaccurate information or inquiry , please approach to the report owner of each KPI as below :
+                                                            </p> <ul><li><span style="font-weight: bold;">Engagement % shared , new client acceptance list , no client code displayed  : </span>Khun Chonlarot Meejitpaisarn</li> <li><span style="font-weight: bold;">Learning Policy Compliance , EMS non-compliance : </span>Khun Angkana Manomaya</li> <li><span style="font-weight: bold;">Late archiving , Quality review , AQM  : </span>Khun Warawan Tajan</li> <li><span style="font-weight: bold;">Time entry self ( late timesheet ) : </span>Khun Lugsana Imsamer</li> <li><span style="font-weight: bold;">RRG non-compliance &amp; ISO non-compliance :  </span>Khun Suchanan Areekul</li> <li><span style="font-weight: bold;">Budget Rate by engagement :  </span>Engagement partner</li> <li><span style="font-weight: bold;">Eminence Building , Firm contribution hours :  </span>Review from “report” tab in Self-Reporting Tool system</li> <li><span style="font-weight: bold;">% Epic platform adoption :  </span>Khun&nbsp;Panida Wisarutnart</li> <li><span style="font-weight: bold;">Proposal hours : Review from report tab in </span>Self-Reporting Tool System</li></ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> <div class="row  pt-sm-1">
+                                        <div class="col-lg-12">
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <div class="call-to-action light-gray-bg p-10 shadow bordered">
+                                                        <div class="row">
+                                                            <div class="col-lg-12">
+                                                                <p class="bg-success text-white text-center p-10">
+                                                                    <strong>
+                                                                        Financial Excellence<br>
+                                                                    </strong>
+                                                                </p>
+                                                            </div>
+                                                        </div> <hr> <br> <div class="row"><div class="col-lg-6"><div class="card item-card card-block p-10 pt-1 " style="height: 80px;"><p><strong>#Actual Rate Per Hours</strong></p> <h4 class="text-center bottom-align-text"><b>1,363</b></h4></div></div></div> <br> <div class="row"><div class="col-lg-6"><div class="card item-card card-block p-10 pt-1 " style="height: 80px;"><p><strong>#Total Engagement Hours</strong></p> <h4 class="text-center bottom-align-text"><b>11,416</b></h4></div></div> <div class="col-lg-6"><div class="card item-card card-block p-10 pt-1 " style="height: 80px;"><p><strong>#Total Engagement NSR</strong></p> <h4 class="text-center bottom-align-text"><b>15,564,548.30</b></h4></div></div></div> <br> <div class="row">
+                                                            <div class="col-lg-12">
+                                                                <div class="card-block">
+                                                                    <div class="block ">
+                                                                        <div>
+                                                                            <div class="b-table-sticky-header" style="max-height: 420px;">
+                                                                                <table role="table" aria-busy="false" aria-colcount="11" class="table b-table table-striped table-hover table-bordered table-sm" id="__BVID__3">
+                                                                                    <!----><!---->
+                                                                                    <thead role="rowgroup" class=""><!----><tr role="row" class=""><th role="columnheader" scope="col" tabindex="0" aria-colindex="1" class="table-b-table-default text-center" style="width: 3%;">No.<span class="sr-only"> (Click to clear sorting)</span></th><th role="columnheader" scope="col" tabindex="0" aria-colindex="2" aria-sort="none" class="table-b-table-default text-center" style="width: 5%;">Swift No<span class="sr-only"> (Click to sort Ascending)</span></th><th role="columnheader" scope="col" tabindex="0" aria-colindex="3" aria-sort="ascending" class="table-b-table-default text-left" style="width: 28%;">Client Name<span class="sr-only"> (Click to sort Descending)</span></th><th role="columnheader" scope="col" tabindex="0" aria-colindex="4" aria-sort="none" class="table-b-table-default text-right" style="width: 10%;">Budget NSR<span class="sr-only"> (Click to sort Ascending)</span></th><th role="columnheader" scope="col" tabindex="0" aria-colindex="5" aria-sort="none" class="table-b-table-default text-right" style="width: 8%;">Budget RPH<span class="sr-only"> (Click to sort Ascending)</span></th><th role="columnheader" scope="col" tabindex="0" aria-colindex="6" aria-sort="none" class="table-b-table-default text-right" style="width: 3%;">% Shared<span class="sr-only"> (Click to sort Ascending)</span></th><th role="columnheader" scope="col" tabindex="0" aria-colindex="7" aria-sort="none" class="table-b-table-default text-right" style="width: 3%;">% Shared Hrs<span class="sr-only"> (Click to sort Ascending)</span></th><th role="columnheader" scope="col" tabindex="0" aria-colindex="8" aria-sort="none" class="table-b-table-default text-right" style="width: 10%;">Share NSR<span class="sr-only"> (Click to sort Ascending)</span></th><th role="columnheader" scope="col" tabindex="0" aria-colindex="9" aria-sort="none" class="table-b-table-default text-right" style="width: 10%;">Total NSR<span class="sr-only"> (Click to sort Ascending)</span></th><th role="columnheader" scope="col" tabindex="0" aria-colindex="10" aria-sort="none" class="table-b-table-default text-right" style="width: 10%;">Share Hrs.<span class="sr-only"> (Click to sort Ascending)</span></th><th role="columnheader" scope="col" tabindex="0" aria-colindex="11" aria-sort="none" class="table-b-table-default text-right" style="width: 10%;">Total Eng Hrs<span class="sr-only"> (Click to sort Ascending)</span></th></tr></thead>
+                                                                                    <tbody role="rowgroup">
+                                                                                        <!---->
+                                                                                        <tr role="row" class="">
+                                                                                            <td aria-colindex="1" role="cell" class="text-center">
+                                                                                                1
+                                                                                            </td>
+                                                                                            <td aria-colindex="2" role="cell" class="text-center">1649706</td>
+                                                                                            <td aria-colindex="3" role="cell" class="text-left">Bayer Holding (Thailand) Co., Ltd.</td>
+                                                                                            <td aria-colindex="4" role="cell" class="text-right">
+                                                                                                90,000.00
+                                                                                            </td>
+                                                                                            <td aria-colindex="5" role="cell" class="text-right">
+                                                                                                1,000.00
+                                                                                            </td>
+                                                                                            <td aria-colindex="6" role="cell" class="text-right">100</td>
+                                                                                            <td aria-colindex="7" role="cell" class="text-right">100</td>
+                                                                                            <td aria-colindex="8" role="cell" class="text-right">
+                                                                                                55,678.00
+                                                                                            </td>
+                                                                                            <td aria-colindex="9" role="cell" class="text-right">
+                                                                                                55,678.00
+                                                                                            </td>
+                                                                                            <td aria-colindex="10" role="cell" class="text-right">
+                                                                                                38.00
+                                                                                            </td>
+                                                                                            <td aria-colindex="11" role="cell" class="text-right">
+                                                                                                38.00
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr role="row" class="">
+                                                                                            <td aria-colindex="1" role="cell" class="text-center">
+                                                                                                2
+                                                                                            </td>
+                                                                                            <td aria-colindex="2" role="cell" class="text-center">1634264</td>
+                                                                                            <td aria-colindex="3" role="cell" class="text-left">Bayer Thailand Group</td>
+                                                                                            <td aria-colindex="4" role="cell" class="text-right">
+                                                                                                2,600,000.00
+                                                                                            </td>
+                                                                                            <td aria-colindex="5" role="cell" class="text-right">
+                                                                                                1,733.00
+                                                                                            </td>
+                                                                                            <td aria-colindex="6" role="cell" class="text-right">100</td>
+                                                                                            <td aria-colindex="7" role="cell" class="text-right">100</td>
+                                                                                            <td aria-colindex="8" role="cell" class="text-right">
+                                                                                                3,036,912.00
+                                                                                            </td>
+                                                                                            <td aria-colindex="9" role="cell" class="text-right">
+                                                                                                3,036,912.00
+                                                                                            </td>
+                                                                                            <td aria-colindex="10" role="cell" class="text-right">
+                                                                                                1,469.00
+                                                                                            </td>
+                                                                                            <td aria-colindex="11" role="cell" class="text-right">
+                                                                                                1,469.00
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr role="row" class="">
+                                                                                            <td aria-colindex="1" role="cell" class="text-center">
+                                                                                                3
+                                                                                            </td>
+                                                                                            <td aria-colindex="2" role="cell" class="text-center">1652604</td>
+                                                                                            <td aria-colindex="3" role="cell" class="text-left">CPP Energy Co.,Ltd.</td>
+                                                                                            <td aria-colindex="4" role="cell" class="text-right">
+                                                                                                310,000.00
+                                                                                            </td>
+                                                                                            <td aria-colindex="5" role="cell" class="text-right">
+                                                                                                1,073.00
+                                                                                            </td>
+                                                                                            <td aria-colindex="6" role="cell" class="text-right">100</td>
+                                                                                            <td aria-colindex="7" role="cell" class="text-right">100</td>
+                                                                                            <td aria-colindex="8" role="cell" class="text-right">
+                                                                                                282,048.00
+                                                                                            </td>
+                                                                                            <td aria-colindex="9" role="cell" class="text-right">
+                                                                                                282,048.00
+                                                                                            </td>
+                                                                                            <td aria-colindex="10" role="cell" class="text-right">
+                                                                                                294.00
+                                                                                            </td>
+                                                                                            <td aria-colindex="11" role="cell" class="text-right">
+                                                                                                294.00
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr role="row" class="">
+                                                                                            <td aria-colindex="1" role="cell" class="text-center">
+                                                                                                4
+                                                                                            </td>
+                                                                                            <td aria-colindex="2" role="cell" class="text-center">1654981</td>
+                                                                                            <td aria-colindex="3" role="cell" class="text-left">CPP Holding Co.,Ltd.</td>
+                                                                                            <td aria-colindex="4" role="cell" class="text-right">
+                                                                                                450,000.00
+                                                                                            </td>
+                                                                                            <td aria-colindex="5" role="cell" class="text-right">
+                                                                                                1,257.00
+                                                                                            </td>
+                                                                                            <td aria-colindex="6" role="cell" class="text-right">100</td>
+                                                                                            <td aria-colindex="7" role="cell" class="text-right">100</td>
+                                                                                            <td aria-colindex="8" role="cell" class="text-right">
+                                                                                                577,503.00
+                                                                                            </td>
+                                                                                            <td aria-colindex="9" role="cell" class="text-right">
+                                                                                                577,503.00
+                                                                                            </td>
+                                                                                            <td aria-colindex="10" role="cell" class="text-right">
+                                                                                                345.00
+                                                                                            </td>
+                                                                                            <td aria-colindex="11" role="cell" class="text-right">
+                                                                                                345.00
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr role="row" class="">
+                                                                                            <td aria-colindex="1" role="cell" class="text-center">
+                                                                                                5
+                                                                                            </td>
+                                                                                            <td aria-colindex="2" role="cell" class="text-center">1640999</td>
+                                                                                            <td aria-colindex="3" role="cell" class="text-left">IMV (Thailand) Co.,Ltd.</td>
+                                                                                            <td aria-colindex="4" role="cell" class="text-right">
+                                                                                                508,000.00
+                                                                                            </td>
+                                                                                            <td aria-colindex="5" role="cell" class="text-right">
+                                                                                                1,201.00
+                                                                                            </td>
+                                                                                            <td aria-colindex="6" role="cell" class="text-right">100</td>
+                                                                                            <td aria-colindex="7" role="cell" class="text-right">100</td>
+                                                                                            <td aria-colindex="8" role="cell" class="text-right">
+                                                                                                527,903.00
+                                                                                            </td>
+                                                                                            <td aria-colindex="9" role="cell" class="text-right">
+                                                                                                527,903.00
+                                                                                            </td>
+                                                                                            <td aria-colindex="10" role="cell" class="text-right">
+                                                                                                423.00
+                                                                                            </td>
+                                                                                            <td aria-colindex="11" role="cell" class="text-right">
+                                                                                                423.00
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr role="row" class="">
+                                                                                            <td aria-colindex="1" role="cell" class="text-center">
+                                                                                                6
+                                                                                            </td>
+                                                                                            <td aria-colindex="2" role="cell" class="text-center">1639858</td>
+                                                                                            <td aria-colindex="3" role="cell" class="text-left">JVC KENWOOD (Thailand) Co.,Ltd</td>
+                                                                                            <td aria-colindex="4" role="cell" class="text-right">
+                                                                                                485,000.00
+                                                                                            </td>
+                                                                                            <td aria-colindex="5" role="cell" class="text-right">
+                                                                                                1,160.00
+                                                                                            </td>
+                                                                                            <td aria-colindex="6" role="cell" class="text-right">100</td>
+                                                                                            <td aria-colindex="7" role="cell" class="text-right">100</td>
+                                                                                            <td aria-colindex="8" role="cell" class="text-right">
+                                                                                                485,064.00
+                                                                                            </td>
+                                                                                            <td aria-colindex="9" role="cell" class="text-right">
+                                                                                                485,064.00
+                                                                                            </td>
+                                                                                            <td aria-colindex="10" role="cell" class="text-right">
+                                                                                                384.00
+                                                                                            </td>
+                                                                                            <td aria-colindex="11" role="cell" class="text-right">
+                                                                                                384.00
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr role="row" class="">
+                                                                                            <td aria-colindex="1" role="cell" class="text-center">
+                                                                                                7
+                                                                                            </td>
+                                                                                            <td aria-colindex="2" role="cell" class="text-center">1641537</td>
+                                                                                            <td aria-colindex="3" role="cell" class="text-left">Michelin ROH Co., Ltd.</td>
+                                                                                            <td aria-colindex="4" role="cell" class="text-right">
+                                                                                                693,515.20
+                                                                                            </td>
+                                                                                            <td aria-colindex="5" role="cell" class="text-right">
+                                                                                                1,651.00
+                                                                                            </td>
+                                                                                            <td aria-colindex="6" role="cell" class="text-right">70</td>
+                                                                                            <td aria-colindex="7" role="cell" class="text-right">70</td>
+                                                                                            <td aria-colindex="8" role="cell" class="text-right">
+                                                                                                668,936.80
+                                                                                            </td>
+                                                                                            <td aria-colindex="9" role="cell" class="text-right">
+                                                                                                668,936.80
+                                                                                            </td>
+                                                                                            <td aria-colindex="10" role="cell" class="text-right">
+                                                                                                380.80
+                                                                                            </td>
+                                                                                            <td aria-colindex="11" role="cell" class="text-right">
+                                                                                                380.80
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr role="row" class="">
+                                                                                            <td aria-colindex="1" role="cell" class="text-center">
+                                                                                                8
+                                                                                            </td>
+                                                                                            <td aria-colindex="2" role="cell" class="text-center">1657397</td>
+                                                                                            <td aria-colindex="3" role="cell" class="text-left">Michelin Siam Co.,Ltd.</td>
+                                                                                            <td aria-colindex="4" role="cell" class="text-right">
+                                                                                                2,065,812.70
+                                                                                            </td>
+                                                                                            <td aria-colindex="5" role="cell" class="text-right">
+                                                                                                1,596.00
+                                                                                            </td>
+                                                                                            <td aria-colindex="6" role="cell" class="text-right">70</td>
+                                                                                            <td aria-colindex="7" role="cell" class="text-right">70</td>
+                                                                                            <td aria-colindex="8" role="cell" class="text-right">
+                                                                                                3,325,213.50
+                                                                                            </td>
+                                                                                            <td aria-colindex="9" role="cell" class="text-right">
+                                                                                                3,325,213.50
+                                                                                            </td>
+                                                                                            <td aria-colindex="10" role="cell" class="text-right">
+                                                                                                2,449.30
+                                                                                            </td>
+                                                                                            <td aria-colindex="11" role="cell" class="text-right">
+                                                                                                2,449.30
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr role="row" class="">
+                                                                                            <td aria-colindex="1" role="cell" class="text-center">
+                                                                                                9
+                                                                                            </td>
+                                                                                            <td aria-colindex="2" role="cell" class="text-center">1647111</td>
+                                                                                            <td aria-colindex="3" role="cell" class="text-left">Siam i-Logistics Ltd.</td>
+                                                                                            <td aria-colindex="4" role="cell" class="text-right">
+                                                                                                629,000.00
+                                                                                            </td>
+                                                                                            <td aria-colindex="5" role="cell" class="text-right">
+                                                                                                1,041.00
+                                                                                            </td>
+                                                                                            <td aria-colindex="6" role="cell" class="text-right">100</td>
+                                                                                            <td aria-colindex="7" role="cell" class="text-right">100</td>
+                                                                                            <td aria-colindex="8" role="cell" class="text-right">
+                                                                                                648,752.00
+                                                                                            </td>
+                                                                                            <td aria-colindex="9" role="cell" class="text-right">
+                                                                                                648,752.00
+                                                                                            </td>
+                                                                                            <td aria-colindex="10" role="cell" class="text-right">
+                                                                                                549.00
+                                                                                            </td>
+                                                                                            <td aria-colindex="11" role="cell" class="text-right">
+                                                                                                549.00
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr role="row" class="">
+                                                                                            <td aria-colindex="1" role="cell" class="text-center">
+                                                                                                10
+                                                                                            </td>
+                                                                                            <td aria-colindex="2" role="cell" class="text-center">1662953</td>
+                                                                                            <td aria-colindex="3" role="cell" class="text-left">SRT Asset Co.,Ltd.</td>
+                                                                                            <td aria-colindex="4" role="cell" class="text-right">
+                                                                                                975,000.00
+                                                                                            </td>
+                                                                                            <td aria-colindex="5" role="cell" class="text-right">
+                                                                                                1,121.00
+                                                                                            </td>
+                                                                                            <td aria-colindex="6" role="cell" class="text-right">100</td>
+                                                                                            <td aria-colindex="7" role="cell" class="text-right">100</td>
+                                                                                            <td aria-colindex="8" role="cell" class="text-right">
+                                                                                                1,154,736.00
+                                                                                            </td>
+                                                                                            <td aria-colindex="9" role="cell" class="text-right">
+                                                                                                1,154,736.00
+                                                                                            </td>
+                                                                                            <td aria-colindex="10" role="cell" class="text-right">
+                                                                                                1,197.00
+                                                                                            </td>
+                                                                                            <td aria-colindex="11" role="cell" class="text-right">
+                                                                                                1,197.00
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr role="row" class="">
+                                                                                            <td aria-colindex="1" role="cell" class="text-center">
+                                                                                                11
+                                                                                            </td>
+                                                                                            <td aria-colindex="2" role="cell" class="text-center">1634625</td>
+                                                                                            <td aria-colindex="3" role="cell" class="text-left">Thai GMB Industry Co.,Ltd.</td>
+                                                                                            <td aria-colindex="4" role="cell" class="text-right">
+                                                                                                1,152,000.00
+                                                                                            </td>
+                                                                                            <td aria-colindex="5" role="cell" class="text-right">
+                                                                                                1,127.00
+                                                                                            </td>
+                                                                                            <td aria-colindex="6" role="cell" class="text-right">100</td>
+                                                                                            <td aria-colindex="7" role="cell" class="text-right">100</td>
+                                                                                            <td aria-colindex="8" role="cell" class="text-right">
+                                                                                                1,362,878.00
+                                                                                            </td>
+                                                                                            <td aria-colindex="9" role="cell" class="text-right">
+                                                                                                1,362,878.00
+                                                                                            </td>
+                                                                                            <td aria-colindex="10" role="cell" class="text-right">
+                                                                                                1,201.00
+                                                                                            </td>
+                                                                                            <td aria-colindex="11" role="cell" class="text-right">
+                                                                                                1,201.00
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr role="row" class="">
+                                                                                            <td aria-colindex="1" role="cell" class="text-center">
+                                                                                                12
+                                                                                            </td>
+                                                                                            <td aria-colindex="2" role="cell" class="text-center">1643534</td>
+                                                                                            <td aria-colindex="3" role="cell" class="text-left">UACJ (Thailand) Co.,Ltd.</td>
+                                                                                            <td aria-colindex="4" role="cell" class="text-right">
+                                                                                                2,450,000.00
+                                                                                            </td>
+                                                                                            <td aria-colindex="5" role="cell" class="text-right">
+                                                                                                1,704.00
+                                                                                            </td>
+                                                                                            <td aria-colindex="6" role="cell" class="text-right">100</td>
+                                                                                            <td aria-colindex="7" role="cell" class="text-right">100</td>
+                                                                                            <td aria-colindex="8" role="cell" class="text-right">
+                                                                                                3,438,924.00
+                                                                                            </td>
+                                                                                            <td aria-colindex="9" role="cell" class="text-right">
+                                                                                                3,438,924.00
+                                                                                            </td>
+                                                                                            <td aria-colindex="10" role="cell" class="text-right">
+                                                                                                2,686.50
+                                                                                            </td>
+                                                                                            <td aria-colindex="11" role="cell" class="text-right">
+                                                                                                2,686.50
+                                                                                            </td>
+                                                                                        </tr><!----><!---->
+                                                                                    </tbody><!---->
+                                                                                </table>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div> <!----> <br> <div class="row"><div class="col-lg-6"><div class="card item-card card-block p-10 pt-1" style="height: 80px;"><p><strong># Wip /AR</strong></p> <h4 class="text-center bottom-align-text"><b>0 %</b></h4></div></div></div> <br> <div class="row"><div class="col-lg-6"><div class="card item-card card-block p-10 pt-1" style="height: 80px;"><p><strong># Utilization Rate </strong></p> <h4 class="text-center bottom-align-text"><b>0 %</b></h4></div></div> <div class="col-lg-6"><div class="card item-card card-block p-10 pt-1" style="height: 80px;"><p><strong># Time Entry Self.</strong></p> <h4 class="text-center bottom-align-text"><b>0</b></h4></div></div></div> <br> <div class="row">
+                                                            <div class="col-lg-12">
+                                                                <p class="bg-success text-white text-center p-10">
+                                                                    <strong>
+                                                                        Accepting new clients <br>
+                                                                    </strong>
+                                                                </p>
+                                                            </div>
+                                                        </div> <div class="row"><div class="col-lg-6"><div class="card item-card card-block p-10 pt-1" style="height: 80px;"><p><strong># Accepting new clients.</strong></p> <h4 class="text-center bottom-align-text"><b>0</b></h4></div></div></div> <br> <div class="row"><div class="col-lg-12"><div class="card-block" style="margin-left: 10px; margin-right: 10px;"><div class="block "><div><div class="b-table-sticky-header" style="max-height: 320px;"><table role="table" aria-busy="false" aria-colcount="6" class="table b-table table-striped table-bordered table-sm" id="__BVID__20"><!----><!----><thead role="rowgroup" class=""><!----><tr role="row" class=""><th role="columnheader" scope="col" tabindex="0" aria-colindex="1" class="table-b-table-default text-center" style="width: 5%;">No.<span class="sr-only"> (Click to clear sorting)</span></th><th role="columnheader" scope="col" tabindex="0" aria-colindex="2" aria-sort="none" class="table-b-table-default text-center" style="width: 8%;">Swift No.<span class="sr-only"> (Click to sort Ascending)</span></th><th role="columnheader" scope="col" tabindex="0" aria-colindex="3" aria-sort="ascending" class="table-b-table-default text-left" style="width: 45%;">New Client Name<span class="sr-only"> (Click to sort Descending)</span></th><th role="columnheader" scope="col" tabindex="0" aria-colindex="4" aria-sort="none" class="table-b-table-default text-right" style="width: 5%;">% Shared<span class="sr-only"> (Click to sort Ascending)</span></th><th role="columnheader" scope="col" tabindex="0" aria-colindex="5" aria-sort="none" class="table-b-table-default text-right" style="width: 18%;">Share NSR<span class="sr-only"> (Click to sort Ascending)</span></th><th role="columnheader" scope="col" tabindex="0" aria-colindex="6" aria-sort="none" class="table-b-table-default text-right" style="width: 19%;">Total NSR<span class="sr-only"> (Click to sort Ascending)</span></th></tr></thead><tbody role="rowgroup"><!----><tr role="row" class="b-table-empty-row"><td colspan="6" role="cell" class=""><div role="alert" aria-live="polite"><div class="text-center my-2">There are no records to show</div></div></td></tr><!----></tbody><!----></table></div></div></div></div></div></div> <br> <div class="row">
+                                                            <div class="col-lg-12">
+                                                                <p class="bg-success text-white text-center p-10">
+                                                                    <strong>
+                                                                        Eminence Building<br>
+                                                                    </strong>
+                                                                </p>
+                                                            </div>
+                                                        </div> <div class="row"><div class="col-lg-6"><div class="card item-card card-block p-10 pt-1" style="height: 80px;"><p><strong># Eminence.</strong></p> <h4 class="text-center bottom-align-text"><b>0</b></h4></div></div></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> <br> <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <div class="call-to-action light-gray-bg p-10 shadow bordered">
+                                                        <div class="row">
+                                                            <div class="col-lg-12">
+                                                                <p class="bg-success text-white text-center p-20">
+                                                                    <strong>
+                                                                        Transformation<br>
+                                                                    </strong>
+                                                                </p>
+                                                            </div>
+                                                        </div> <div class="row"><div class="col-lg-12"><h3>Epic Platform Adoption</h3> <div class="row"><div class="col-md-4 col-sm-4 item"><div class="card item-card card-block p-10" style="margin-left: 15px; height: 80px;"><p><strong>% Epic platform adoption</strong></p> <h4 class="text-center bottom-align-text"><b>N/A</b></h4></div></div></div> <hr> <div class="row"><div class="col-lg-12"><div class="card-block" style="margin-left: 10px; margin-right: 10px;"><div class="block "><div><table role="table" aria-busy="false" aria-colcount="6" class="table b-table table-striped table-bordered table-sm b-table-stacked-sm" id="__BVID__32" aria-describedby="__BVID__32__caption_" style="max-height: 320px;"><!----><!----><thead role="rowgroup" class=""><!----><tr role="row" class=""><th role="columnheader" scope="col" tabindex="0" aria-colindex="1" aria-label="Engname Id" class="text-center" style="width: 5%;"><span class="sr-only"> (Click to clear sorting)</span></th><th role="columnheader" scope="col" tabindex="0" aria-colindex="2" class="text-center" style="width: 12%;">Engagement No<span class="sr-only"> (Click to clear sorting)</span></th><th role="columnheader" scope="col" tabindex="0" aria-colindex="3" class="text-left" style="width: 49%;">Engagement Name<span class="sr-only"> (Click to clear sorting)</span></th><th role="columnheader" scope="col" tabindex="0" aria-colindex="4" aria-sort="ascending" class="text-center" style="width: 8%;">Period End Date<span class="sr-only"> (Click to sort Descending)</span></th><th role="columnheader" scope="col" tabindex="0" aria-colindex="5" class="text-left" style="width: 15%;">Manager Name<span class="sr-only"> (Click to clear sorting)</span></th><th role="columnheader" scope="col" tabindex="0" aria-colindex="6" class="text-center" style="width: 11%;">Status<span class="sr-only"> (Click to clear sorting)</span></th></tr></thead><tbody role="rowgroup"><!----><tr role="row" class="b-table-empty-row"><td colspan="6" role="cell" class=""><div><div role="alert" aria-live="polite"><div class="text-center my-2">There are no records to show</div></div></div></td></tr><!----></tbody><!----></table></div></div></div></div></div></div></div> <h3>Realizing transformation investment hours</h3> <div class="row">
+                                                            <div class="col-lg-4"><div class="call-to-action light-gray-bg p-10 shadow bordered"><div class="row"><div class="col-lg-12"><div id="mainAchieved" _echarts_instance_="ec_1726202729749" style="width: 100%; height: 280px; -webkit-tap-highlight-color: transparent; user-select: none; position: relative;"><div style="position: relative; width: 443px; height: 280px; padding: 0px; margin: 0px; border-width: 0px;"><canvas data-zr-dom-id="zr_0" width="443" height="280" style="position: absolute; left: 0px; top: 0px; width: 443px; height: 280px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div></div></div> <div class="row"><div class="col-md-6 col-sm-6 item"><div class="card item-card card-block p-10 " style="padding-top: 0px; padding-bottom: 0px; height: 105px;"><p><strong>Total Client</strong></p> <h4 class="text-center bottom-align-text "><b>0</b></h4></div></div> <div class="col-md-6 col-sm-6 item"><div class="card item-card card-block p-10 " style="padding-top: 0px; padding-bottom: 0px; height: 105px;"><p><strong>Total Achieved</strong></p> <h4 class="text-center bottom-align-text"><b>0</b></h4></div></div></div></div></div> <div class="col-lg-8">
+                                                                <div class="row">
+                                                                    <div class="col-lg-8">
+                                                                        <div class="card item-card card-block p-10 " style="padding-top: 0px; padding-bottom: 0px; height: 115px;">
+                                                                            <p>
+                                                                                <strong>
+                                                                                    Achieved Percent
+                                                                                </strong>
+                                                                            </p> <h4 class="text-center bottom-align-text"><b>0 %</b></h4>
+                                                                        </div>
+                                                                    </div>
+                                                                </div> <hr> <div class="row"><div class="col-lg-12"><div class="card-block" style="margin-left: 10px; margin-right: 10px;"><div class="block "><div><table role="table" aria-busy="false" aria-colcount="6" class="table b-table table-striped table-bordered table-sm b-table-stacked-sm" id="__BVID__44" aria-describedby="__BVID__44__caption_" style="max-height: 320px;"><!----><!----><thead role="rowgroup" class=""><!----><tr role="row" class=""><th role="columnheader" scope="col" tabindex="0" aria-colindex="1" class="text-center" style="width: 5%;">No.<span class="sr-only"> (Click to clear sorting)</span></th><th role="columnheader" scope="col" tabindex="0" aria-colindex="2" aria-sort="none" class="text-center" style="width: 8%;">Swift No.<span class="sr-only"> (Click to sort Ascending)</span></th><th role="columnheader" scope="col" tabindex="0" aria-colindex="3" aria-sort="ascending" class="text-left" style="width: 45%;">Client Name<span class="sr-only"> (Click to sort Descending)</span></th><th role="columnheader" scope="col" tabindex="0" aria-colindex="4" aria-sort="none" class="text-right" style="width: 12%;">FY25 Hrs.<span class="sr-only"> (Click to sort Ascending)</span></th><th role="columnheader" scope="col" tabindex="0" aria-colindex="5" aria-sort="none" class="text-right" style="width: 12%;">Planned Hrs.<span class="sr-only"> (Click to sort Ascending)</span></th><th role="columnheader" scope="col" tabindex="0" aria-colindex="6" aria-sort="none" class="text-center" style="width: 30%;">Archieve Status<span class="sr-only"> (Click to sort Ascending)</span></th></tr></thead><tbody role="rowgroup"><!----><tr role="row" class="b-table-empty-row"><td colspan="6" role="cell" class=""><div><div role="alert" aria-live="polite"><div class="text-center my-2">There are no records to show</div></div></div></td></tr><!----></tbody><!----></table></div></div></div></div></div>
+                                                            </div>
+                                                        </div> <hr> <h3>Hybrid team working model (RADC/RCC/SDH)</h3> <div class="row"><div class="col-lg-4"><div class="call-to-action light-gray-bg p-10 shadow bordered"><div class="row"><div class="col-lg-12"><div id="mainEMS" _echarts_instance_="ec_1726202729748" style="width: 100%; height: 280px; -webkit-tap-highlight-color: transparent; user-select: none;"><div style="position: relative; width: 443px; height: 280px; padding: 0px; margin: 0px; border-width: 0px;"><canvas data-zr-dom-id="zr_0" width="443" height="280" style="position: absolute; left: 0px; top: 0px; width: 443px; height: 280px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div></div></div></div> <div class="row"><div class="col-md-6 col-sm-6 item"><div class="card item-card card-block p-10 " style="padding-top: 0px; padding-bottom: 0px; height: 105px;"><p><strong>Actual.</strong></p> <h4 class="text-center bottom-align-text "><b>0</b></h4></div></div> <div class="col-md-6 col-sm-6 item"><div class="card item-card card-block p-10 " style="padding-top: 0px; padding-bottom: 0px; height: 105px;"><p><strong>Planned (Approved).</strong></p> <h4 class="text-center bottom-align-text"><b>0</b></h4></div></div></div></div></div> <div class="col-lg-8"><div class="row"><div class="col-lg-12"><div class="card-block" style="margin-left: 10px; margin-right: 10px;"><div class="block "><div><table role="table" aria-busy="false" aria-colcount="5" class="table b-table table-striped table-bordered table-sm b-table-stacked-sm" id="__BVID__56" aria-describedby="__BVID__56__caption_" style="max-height: 320px;"><!----><!----><thead role="rowgroup" class=""><!----><tr role="row" class=""><th role="columnheader" scope="col" tabindex="0" aria-colindex="1" class="text-center" style="width: 5%;">No.<span class="sr-only"> (Click to clear sorting)</span></th><th role="columnheader" scope="col" tabindex="0" aria-colindex="2" aria-sort="none" class="text-center" style="width: 15%;">Swift No.<span class="sr-only"> (Click to sort Ascending)</span></th><th role="columnheader" scope="col" tabindex="0" aria-colindex="3" aria-sort="ascending" class="text-left" style="width: 45%;">Client Name<span class="sr-only"> (Click to sort Descending)</span></th><th role="columnheader" scope="col" tabindex="0" aria-colindex="4" aria-sort="none" class="text-right" style="width: 18%;">Planed Hrs FY25<span class="sr-only"> (Click to sort Ascending)</span></th><th role="columnheader" scope="col" tabindex="0" aria-colindex="5" aria-sort="none" class="text-right" style="width: 19%;">Actual Hrs FY25<span class="sr-only"> (Click to sort Ascending)</span></th></tr></thead><tbody role="rowgroup"><!----><tr role="row" class="b-table-empty-row"><td colspan="5" role="cell" class=""><div><div role="alert" aria-live="polite"><div class="text-center my-2">There are no records to show</div></div></div></td></tr><!----></tbody><!----></table></div></div></div></div></div></div></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> <br> <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <div class="call-to-action light-gray-bg p-10 shadow bordered">
+                                                        <div class="row">
+                                                            <div class="col-lg-12">
+                                                                <p class="bg-success text-white text-center p-20">
+                                                                    <strong>
+                                                                        Talent Development<br>
+                                                                    </strong>
+                                                                </p>
+                                                            </div>
+                                                        </div> <div class="row"></div> <div class="row"><div class="col-lg-6"><div class="card item-card card-block p-10 pt-1" style="height: 80px;"><p><strong>Learning policy compliance</strong></p> <h4 class="text-center bottom-align-text"><b>Compliance</b></h4></div> <!----></div> <div class="col-lg-6"><div class="card item-card card-block p-10 pt-1" style="height: 80px;"><p><strong>Firm contribution event (data from Self-Reporting Tool)</strong></p> <h4 class="text-center bottom-align-text"><b>N/A</b></h4></div></div></div> <br> <div class="row"><div class="col-lg-6"><div class="card item-card card-block p-10 pt-1" style="height: 80px;"><p><strong>TOEIC SCORE</strong></p> <h4 class="text-center bottom-align-text"><b>   N/A</b></h4></div></div> <div class="col-lg-6"><div class="card item-card card-block p-10 pt-1" style="height: 80px;"><p><strong>Professional License</strong></p> <h4 class="text-center bottom-align-text"><b> N/A</b></h4></div></div></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div> <div class="col-lg-6">
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <div class="call-to-action light-gray-bg p-10 shadow bordered">
+                                                        <div class="row">
+                                                            <div class="col-lg-12">
+                                                                <p class="bg-success text-white text-center p-20">
+                                                                    <strong>
+                                                                        Quality
+
+                                                                    </strong>
+                                                                </p>
+                                                            </div>
+                                                        </div> <div class="row"><div class="col-lg-6"><div class="card item-card card-block p-10 pt-1" style="height: 80px;"><p><strong>No. Late Archiving</strong></p> <h4 class="text-center bottom-align-text" style="color: black;"><b>0</b></h4></div> <!----></div></div><br> <div class="row"><div class="col-lg-6"><div class="card item-card card-block p-10 pt-1" style="height: 80px;"><p><strong>EMS non-compliance</strong></p> <h4 class="text-center bottom-align-text" style="color: black;"><b>Compliance</b></h4></div> <!----></div> <div class="col-lg-6"><div class="card item-card card-block p-10 pt-1" style="height: 80px;"><p><strong>RRG non-compliance</strong></p> <h4 class="text-center bottom-align-text" style="color: black;"><b>Compliance</b></h4></div> <!----></div></div><br> <div class="row">
+                                                            <div class="col-lg-6"><div class="card item-card card-block p-10 pt-1" style="height: 80px;"><p><strong>ISO non-compliance</strong></p> <h4 class="text-center bottom-align-text" style="color: black;"><b>Compliance</b></h4></div> <!----></div> <div class="col-lg-6">
+                                                                <div class="card item-card card-block p-10 pt-1" style="height: 80px;">
+                                                                    <p>
+                                                                        <strong>
+                                                                            AQM non-compliance
+                                                                        </strong>
+                                                                    </p> <h4 class="text-center bottom-align-text" style="color: black;"><b>Compliance</b></h4>
+                                                                </div> <!---->
+                                                            </div>
+                                                        </div> <hr> <div class="row"><div class="col-lg-6"><div class="card item-card card-block p-10 pt-1" style="height: 80px;"><p><strong>Quality Review - Compliance (actual)</strong></p> <h4 class="text-center bottom-align-text" style="color: black;"><b>0</b></h4></div> <!----></div> <div class="col-lg-6"><div class="card item-card card-block p-10 pt-1" style="height: 80px;"><p><strong>Quality Review - Non-Compliance (actual)</strong></p> <h4 class="text-center bottom-align-text" style="color: black;"><b>0 </b></h4></div> <!----></div></div> <br> <div class="row"><div class="col-lg-6"><div class="card item-card card-block p-10 pt-1" style="height: 80px;"><p><strong>Quality Review - Improvement required (actual)</strong></p> <h4 class="text-center bottom-align-text" style="color: black;"><b>0</b></h4></div> <!----></div></div> <hr> <div class="row"><div class="col-lg-6"><div class="card item-card card-block p-10 pt-1" style="height: 80px;"><p><strong>EQCR Assistant - Compliance (actual)</strong></p> <h4 class="text-center bottom-align-text" style="color: black;"><b>0</b></h4></div> <!----></div> <div class="col-lg-6"><div class="card item-card card-block p-10 pt-1" style="height: 80px;"><p><strong>EQCR Assistant - Non-Compliance (actual)</strong></p> <h4 class="text-center bottom-align-text" style="color: black;"><b>0 </b></h4></div> <!----></div></div> <br> <div class="row"><div class="col-lg-6"><div class="card item-card card-block p-10 pt-1" style="height: 80px;"><p><strong>EQCR Assistant - Improvement required (actual)</strong></p> <h4 class="text-center bottom-align-text" style="color: black;"><b>0</b></h4></div> <!----></div></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> <div role="tabpanel" id="h3tab2" class="tab-pane">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="call-to-action light-gray-bg p-10 shadow bordered">
+                                                <div class="row">
+                                                    <div class="col-lg-6">
+                                                        <h4 class="title">
+                                                            DSMM’s 180 Feedback Report 2024
+                                                        </h4> <p>
+                                                            This 180 feedback report provides you with the overview result on how team members and coachees perceived you in the areas of Leadership, Developing others and Coaching during their recent interactions with you.
+                                                            This report is presented into 2 sections
+
+                                                        </p> <ul><li>the first section collates feedback from team members who have worked with you under the engagement of at least 80 hours-time charged. </li> <li>the second section collates feedback from your coachees who have interactions with you as a Coach. </li></ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> <div class="row"></div> <br> <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="col-lg-12">
+                                                <div class="call-to-action light-gray-bg p-10 shadow bordered">
+                                                    <div class="row">
+                                                        <div class="col-lg-6">
+                                                            <h4 class="title">
+                                                                Coach Role
+
+                                                            </h4> <div><div class="table-responsive-sm"><table role="table" aria-busy="false" aria-colcount="2" class="table b-table table-striped table-hover table-bordered table-sm" id="__BVID__67"><!----><!----><thead role="rowgroup" class=""><!----><tr role="row" class=""><th role="columnheader" scope="col" aria-colindex="1" class="text-center  ee">Question</th><th role="columnheader" scope="col" aria-colindex="2" class="text-left  ee">Description</th></tr></thead><tbody role="rowgroup"><!----><tr role="row" class=""><td aria-colindex="1" role="cell" class="text-center">1</td><td aria-colindex="2" role="cell" class="text-left">As a coach, he/she is approachable and provides check-ins frequently.</td></tr><tr role="row" class=""><td aria-colindex="1" role="cell" class="text-center">2</td><td aria-colindex="2" role="cell" class="text-left">As a coach, he/she helps me gain insight in my strengths, areas for my development, and think about the bigger picture.</td></tr><tr role="row" class=""><td aria-colindex="1" role="cell" class="text-center">3</td><td aria-colindex="2" role="cell" class="text-left">As a coach, he/she helps me understand my role and how to add value using my strengths.</td></tr><tr role="row" class=""><td aria-colindex="1" role="cell" class="text-center">4</td><td aria-colindex="2" role="cell" class="text-left">As a coach, he/she is invested in my growth and development.</td></tr><tr role="row" class=""><td aria-colindex="1" role="cell" class="text-center">5</td><td aria-colindex="2" role="cell" class="text-left">I would readily recommend my coach as a coach to others.</td></tr><!----><!----></tbody><!----></table></div></div> <br> <div><div class="table-responsive-sm"><table role="table" aria-busy="false" aria-colcount="6" class="table b-table table-striped table-bordered table-sm" id="__BVID__78"><!----><!----><thead role="rowgroup" class=""><!----><tr role="row" class=""><th role="columnheader" scope="col" aria-colindex="1" aria-label="Emp Name" class="text-left  ee"></th><th role="columnheader" scope="col" aria-colindex="2" class="text-center  ee">Q1</th><th role="columnheader" scope="col" aria-colindex="3" class="text-center  ee">Q2</th><th role="columnheader" scope="col" aria-colindex="4" class="text-center  me">Q3</th><th role="columnheader" scope="col" aria-colindex="5" class="text-center mse">Q4</th><th role="columnheader" scope="col" aria-colindex="6" class="text-center  dnm">Q5</th></tr></thead><tbody role="rowgroup"></tbody><!----></table></div></div>
+                                                        </div> <div class="col-lg-6"><div id="mainRa2" _echarts_instance_="ec_1726202729751" style="width: 600px; height: 400px; -webkit-tap-highlight-color: transparent; user-select: none;"><div style="position: relative; width: 600px; height: 400px; padding: 0px; margin: 0px; border-width: 0px;"><canvas data-zr-dom-id="zr_0" width="600" height="400" style="position: absolute; left: 0px; top: 0px; width: 600px; height: 400px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div></div></div>
+                                                    </div> <span>
+                                                        Remark : In case of having any percentage below
+                                                    </span><span style="color: red; font-weight: bold;">“red line” </span> <span>, it is </span><span><strong>mandatory</strong></span> <span>to seek advice from your counseling coach.&nbsp;</span> <!---->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> <br> <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="col-lg-12">
+                                                <div class="call-to-action light-gray-bg p-10 shadow bordered">
+                                                    <div class="row">
+                                                        <div class="col-lg-6">
+                                                            <h4 class="title">
+                                                                Team Leader Role
+
+                                                            </h4> <div><div class="table-responsive-sm"><table role="table" aria-busy="false" aria-colcount="2" class="table b-table table-striped table-hover table-bordered table-sm" id="__BVID__88"><!----><!----><thead role="rowgroup" class=""><!----><tr role="row" class=""><th role="columnheader" scope="col" aria-colindex="1" class="text-center  ee">Question</th><th role="columnheader" scope="col" aria-colindex="2" class="text-left  ee">Description</th></tr></thead><tbody role="rowgroup"><!----><tr role="row" class=""><td aria-colindex="1" role="cell" class="text-center">1</td><td aria-colindex="2" role="cell" class="text-left">As a Team Leader, he/she conducts briefing and sets direction for the engagement team (e.g. background of client s business and areas of focus, my roles/ responsibilities, job scope as appropriate).</td></tr><tr role="row" class=""><td aria-colindex="1" role="cell" class="text-center">2</td><td aria-colindex="2" role="cell" class="text-left">As a Team Leader, he/she provides timely and honest feedback with actionable steps that I can take in the future (e.g. what is going well, not going well, how to improve).</td></tr><tr role="row" class=""><td aria-colindex="1" role="cell" class="text-center">3</td><td aria-colindex="2" role="cell" class="text-left">As a Team leader, he/she shows appreciation and gives credit to the team as appropriate.</td></tr><tr role="row" class=""><td aria-colindex="1" role="cell" class="text-center">4</td><td aria-colindex="2" role="cell" class="text-left">As a Team Leader, he/she collaborates with the team including providing instructions, maintaining frequent contact, providing guidance and responding to the engagement team s questions/ concerns etc.</td></tr><tr role="row" class=""><td aria-colindex="1" role="cell" class="text-center">5</td><td aria-colindex="2" role="cell" class="text-left">As a Team Leader, he/she develops and directs a project plan that optimizes the performance of audit procedures to enhance quality and reduce the time pressures.</td></tr><!----><!----></tbody><!----></table></div></div> <br> <div><div class="table-responsive-sm"><table role="table" aria-busy="false" aria-colcount="6" class="table b-table table-striped table-bordered table-sm" id="__BVID__99"><!----><!----><thead role="rowgroup" class=""><!----><tr role="row" class=""><th role="columnheader" scope="col" aria-colindex="1" aria-label="Emp Name" class="text-left  ee"></th><th role="columnheader" scope="col" aria-colindex="2" class="text-center  ee">Q1</th><th role="columnheader" scope="col" aria-colindex="3" class="text-center  ee">Q2</th><th role="columnheader" scope="col" aria-colindex="4" class="text-center  me">Q3</th><th role="columnheader" scope="col" aria-colindex="5" class="text-center mse">Q4</th><th role="columnheader" scope="col" aria-colindex="6" class="text-center  dnm">Q5</th></tr></thead><tbody role="rowgroup"></tbody><!----></table></div></div>
+                                                        </div> <div class="col-lg-6"><div id="mainRa1" _echarts_instance_="ec_1726202729750" style="width: 600px; height: 400px; -webkit-tap-highlight-color: transparent; user-select: none;"><div style="position: relative; width: 600px; height: 400px; padding: 0px; margin: 0px; border-width: 0px;"><canvas data-zr-dom-id="zr_0" width="600" height="400" style="position: absolute; left: 0px; top: 0px; width: 600px; height: 400px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div></div></div>
+                                                    </div> <span>
+                                                        Remark : In case of having any percentage below
+                                                    </span><span style="color: red; font-weight: bold;">“red line” </span> <span>, it is </span><span><strong>mandatory</strong></span> <span>to seek advice from your counseling coach.&nbsp;</span> <!---->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> <div role="tabpanel" id="h3tab3" class="tab-pane"><div class="row"><div class="col-lg-12"></div></div></div>
+                            </div> <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- footer top start -->
+        <!-- ================ -->
+        <!-- ================ -->
+        <!-- footer top end -->
+        <!-- footer start (Add "dark" class to #footer in order to enable dark footer) -->
+        <!-- ================ -->
+        <footer id="footer" class="clearfix ">
+
+            <!-- .footer start -->
+            <!-- ================ -->
+            <!-- .footer end -->
+            <!-- .subfooter start -->
+            <!-- ================ -->
+            <div class="subfooter">
+                <div class="container">
+                    <div class="subfooter-inner">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p class="text-center">Copyright © 2020 The Project by <a href="#">Deloitte Thailand</a>. All Rights Reserved</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- .subfooter end -->
+
+        </footer>
+        <!-- footer end -->
+    </div>
+    <!-- page-wrapper end -->
+    <!-- JavaScript files placed at the end of the document so the pages load faster -->
+    <!-- ================================================== -->
+    <!-- Jquery and Bootstap core js files -->
+    @*<script src="~/Scripts/plugin/ui/jquery-ui.min.js"></script>*@
+    <script src="~/Scripts/plugin/ui/js/jquery-ui-1.9.2.custom.min.js"></script>
+    <!-- Automatically provides/replaces `Promise` if missing or broken. -->
+    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.js"></script>
+
+    <script src="~/Scripts/jquery.signalR-2.4.3.js"></script>
+    <script src="~/Scripts/vue.js"></script>
+    <script type="text/javascript" src="~/Content/MainContent/plugins/popper.min.js"></script>
+    <script type="text/javascript" src="~/Content/MainContent/bootstrap/js/bootstrap.min.js"></script>
+    <script src="~/Scripts/axios.min.js"></script>
+    <!-- Modernizr javascript -->
+    <script type="text/javascript" src="~/Content/MainContent/plugins/modernizr.js"></script>
+    <!-- jQuery Revolution Slider  -->
+    <script type="text/javascript" src="~/Content/MainContent/plugins/rs-plugin-5/js/jquery.themepunch.tools.min.js?rev=5.0"></script>
+    <script type="text/javascript" src="~/Content/MainContent/plugins/rs-plugin-5/js/jquery.themepunch.revolution.min.js?rev=5.0"></script>
+    <!-- Isotope javascript -->
+    <script type="text/javascript" src="~/Content/MainContent/plugins/isotope/imagesloaded.pkgd.min.js"></script>
+    <script type="text/javascript" src="~/Content/MainContent/plugins/isotope/isotope.pkgd.min.js"></script>
+    <!-- Magnific Popup javascript -->
+    <script type="text/javascript" src="~/Content/MainContent/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <!-- Appear javascript -->
+    <script type="text/javascript" src="~/Content/MainContent/plugins/waypoints/jquery.waypoints.min.js"></script>
+    <script type="text/javascript" src="~/Content/MainContent/plugins/waypoints/sticky.min.js"></script>
+    <!-- Count To javascript -->
+    <script type="text/javascript" src="~/Content/MainContent/plugins/jquery.countTo.js"></script>
+    <!-- Parallax javascript -->
+    <script src="~/Content/MainContent/plugins/jquery.parallax-1.1.3.js"></script>
+    <!-- Contact form -->
+    <script src="~/Content/MainContent/plugins/jquery.validate.js"></script>
+    <!-- Owl carousel javascript -->
+    <script type="text/javascript" src="~/Content/MainContent/plugins/owlcarousel2/owl.carousel.min.js"></script>
+    <!-- Pace javascript -->
+    <script type="text/javascript" src="~/Content/MainContent/plugins/pace/pace.min.js"></script>
+    <!-- Initialization of Plugins -->
+    <!-- Bootstrap Notify javascript -->
+    <script type="text/javascript" src="~/Content/MainContent/plugins/bootstrap-notify/bootstrap-notify.js"></script>
+    <script type="text/javascript" src="~/Content/MainContent/js/template.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/eonasdan-bootstrap-datetimepicker@4.17.47/build/css/bootstrap-datetimepicker.min.css">
+    @*<script src="~/Scripts/plugin/datepicker/js/bootstrap-datepicker.js"></script>*@
+    <script src="~/signalr/hubs"></script>
+    <script src="~/Scripts/plugin/bootstrap3-dialog-master/js/bootstrap-dialogV4.js"></script>
+    <!-- Custom Scripts -->
+    <script type="text/javascript" src="~/Content/MainContent/js/custom.js"></script>
+    <script src="~/Scripts/SystemFunc/jquery.blockUI.js"></script>
+
+    <script src="~/Scripts/SystemFunc/sysFunction.js"></script>
+    <script src="~/Scripts/SystemFunc/CommonScript.js"></script>
+    <!--Sweet Alert2-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="~/Scripts/moment.js"></script>
+    <!-- Date-picker itself -->
+    <script src="https://cdn.jsdelivr.net/npm/pc-bootstrap4-datetimepicker@4.17/build/js/bootstrap-datetimepicker.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/pc-bootstrap4-datetimepicker@4.17/build/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+    @*<script src="~/Scripts/plugin/datepicker/js/bootstrap-datepicker.js"></script>
+        <link href="~/Scripts/plugin/datepicker/css/bootstrap-datepicker3.min.css" rel="stylesheet" />*@
+    <script src="https://cdn.jsdelivr.net/npm/vue-bootstrap-datetimepicker@5"></script>
+    <!-- Load polyfills to support older browsers -->
+    <script src="//polyfill.io/v3/polyfill.min.js?features=es2015%2CIntersectionObserver" crossorigin="anonymous"></script>
+
+    <!-- Load Vue followed by BootstrapVue -->
+    <script src="https://unpkg.com/bootstrap-vue@2.9.0/dist/bootstrap-vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+    <!-- Load the following for BootstrapVueIcons support -->
+    <script src="~/Scripts/plugin/bootstrap-vue/bootstrap-vue-icons.min.js"></script>
+    <script src="~/Scripts/plugin/jquery-inputmask/inputmask.js"></script>
+    <script src="~/Scripts/plugin/jsLinq/linq.min.js"></script>
+    <script src="~/Scripts/plugin/jsLinq/jquery.linq.min.js"></script>
+
+    <script src="~/Scripts/plugin/apache-echarts/echarts5.js"></script>
+
+    <script type="text/javascript">
+        //$(document).ajaxStart(function () {
+        //    BlockUI();
+        //});
+        //$(document).ajaxStop(function () {
+        //    UnblockUI();
+        //});
+        $(document).ready(function () {
+            var fullURL = window.location.href;
+            var input = "thbkk0823";
+            var input2 = "thatdsystem.deloitteresources.com/KPI"
+            if (fullURL.includes(input) || fullURL.includes(input2)) {
+                let timerInterval;
+                const redirectUrl = "https://thaudportfolio.atrapa.deloitte.com/";
+                let countdown = 10; // Countdown time in seconds
+
+                Swal.fire({
+                    title: "Announce: URL Changed due to network policy!",
+                    html: `Old URLs such as <br> THBKK0823:18001 <br> thatdsystem.deloitteresources.com/KPI/ <br>
+                                       will be permanently closed on 31 May 2024<br><br>
+                                       You will be redirected automatically in <b>${countdown}</b> seconds.`,
+                    icon: "warning",
+                    showConfirmButton: false,
+                    allowOutsideClick: false,
+                    timer: countdown * 1000,
+                    didOpen: () => {
+                        Swal.showLoading();
+                        timerInterval = setInterval(() => {
+                            countdown--;
+                            Swal.getHtmlContainer().querySelector('b').textContent = countdown;
+                        }, 1000);
+                    },
+                    willClose: () => {
+                        clearInterval(timerInterval);
+                    }
+                }).then((result) => {
+                    if (result.dismiss === Swal.DismissReason.timer) {
+                        window.location.href = redirectUrl;
+                    }
+                });
+
+                // Fallback in case the Swal timer fails
+                setTimeout(() => {
+                    window.location.href = redirectUrl;
+                }, countdown * 1000);
+            }
+        });
+        window.axios.interceptors.request.use(function (config) {
+            BlockUI();
+            return config
+        }, function (error) {
+            UnblockUI();
+            return Promise.reject(error)
+        })
+
+        window.axios.interceptors.response.use(function (response) {
+            UnblockUI();
+            return response
+        }, function (error) {
+            UnblockUI();
+            return Promise.reject(error)
+        });
+
+    </script>
+</body>
+</html>
